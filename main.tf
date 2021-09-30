@@ -1,5 +1,5 @@
 provider "aws" {
-    region = "us-east-1" #Hard-coding the region
+    region = "us-east-2" #Hard-coding the region
     #Static credentials
     access_key = "AKIAW2DIA2DJDXR4FE7R"
     secret_key = "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"
@@ -46,7 +46,7 @@ resource "aws_route_table" "prod-route-table" {
 resource "aws_subnet" "subnet-1" {
     vpc_id = aws_vpc.prod-vpc.id
     cidr_block = "10.0.1.0/24"
-    availability_zone = "us-east-1a"
+    availability_zone = "us-east-2a"
 
     tags = {
       "NameProd-subnet" = "value"
@@ -130,7 +130,7 @@ resource "aws_eip" "one" {
 resource "aws_instance" "web-server-instance" {
     ami = "ami-09e67e426f25ce0d7"
     instance_type = "t2.micro"
-    availability_zone = "us-east-1a"
+    availability_zone = "us-east-2a"
     key_name = "test"
 
     network_interface {
