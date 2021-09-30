@@ -125,7 +125,7 @@ resource "aws_eip" "one" {
 
 #Create the server
 resource "aws_instance" "web-server-instance" {
-    ami = "ami-09e67e426f25ce0d7"
+    ami = "ami-00dfe2c7ce89a450b"
     instance_type = "t2.micro"
     availability_zone = "us-east-2a"
     key_name = "test"
