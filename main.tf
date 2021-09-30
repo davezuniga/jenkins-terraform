@@ -1,8 +1,5 @@
 provider "aws" {
     region = "us-east-2" #Hard-coding the region
-    #Static credentials
-    access_key = "AKIAW2DIA2DJDXR4FE7R"
-    secret_key = "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"
 
 }
 
